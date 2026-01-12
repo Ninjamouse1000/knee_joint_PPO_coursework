@@ -1,0 +1,42 @@
+{
+  "SimKnobs": {
+    "dt": 0.02,
+    "horizon_s": 6.0,
+    "inertia_I": 0.08,
+    "damping_b": 0.02,
+    "tau_max": 2.0,
+    "theta_limit": 3.0
+  },
+  "TargetKnobs": {
+    "amplitude_A": 0.6,
+    "frequency_f": 0.25,
+    "randomize_phase": true,
+    "randomize_amp": false,
+    "amp_min": 0.4,
+    "amp_max": 0.8
+  },
+  "RewardKnobs": {
+    "w_e": 1.0,
+    "w_de": 0.1,
+    "w_tau": 0.001
+  },
+  "PPOKnobs": {
+    "seed": 0,
+    "total_timesteps": 200000,
+    "learning_rate": 0.0003,
+    "n_steps": 2048,
+    "batch_size": 64,
+    "n_epochs": 10,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2,
+    "ent_coef": 0.0,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "net_arch_pi": 64,
+    "net_arch_vf": 64,
+    "activation": "tanh",
+    "n_envs": 8,
+    "rolling_window_episodes": 50
+  }
+}
